@@ -11,7 +11,7 @@ document.querySelectorAll('a[data-scroll]').forEach(anchor => {
       const targetElement = document.getElementById(targetId);
       const headerOffset = 50; // Offset for fixed header
       const elementPosition = targetElement.getBoundingClientRect().top - headerOffset;
-      const startPosition = window.pageYOffset;
+      const startPosition = window
       const duration = 800; // Duration in ms
   
       let startTime = null;
