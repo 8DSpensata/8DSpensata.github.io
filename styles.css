@@ -353,3 +353,36 @@ nav ul.active {
   }
 }
 
+/* Button Section Style */
+.button-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Modern Button Style */
+.modern-button {
+  background-color: #007bff; /* Primary color */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  animation: fadeIn 3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+ 
+}
+
+/* Hover Effect */
+.modern-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Focus Effect */
+.modern-button:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
