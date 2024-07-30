@@ -33,6 +33,12 @@ header h1 {
   animation: fadeIn 2s ease-in;
 }
 
+header p {
+  margin: 0;
+  font-size: 1.0rem;
+  animation: fadeIn 2s ease-in;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -82,6 +88,7 @@ h2 {
   gap: 2rem;
   flex-direction: column;
   text-align: center;
+  animation: fadeIn 2s ease-in;
 }
 
 .about-img {
@@ -101,6 +108,7 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  animation: fadeIn 2s ease-in;
 }
 
 .gallery img {
@@ -119,6 +127,7 @@ h2 {
 .team-member {
   text-align: center;
   margin: 2rem 0;
+  animation: fadeIn 2s ease-in;
 }
 
 .team-member img {
@@ -237,3 +246,110 @@ footer {
       transform: translateY(0);
   }
 }
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+/* Menu styles */
+.nav-list {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-list.menu-open {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.nav-list.menu-close {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Add this CSS to your existing styles */
+nav ul {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav ul.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: block; /* Ensure menu items are block for stacking */
+  }
+
+  nav ul.active {
+    display: block; /* Ensure menu items are shown when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Ensure toggle button is visible */
+  }
+}
+
