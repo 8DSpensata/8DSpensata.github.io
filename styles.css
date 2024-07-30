@@ -134,6 +134,53 @@ h2 {
   transform: scale(1.1);
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    width: calc(50% - 1rem);
+  }
+
+  .team-member {
+    max-width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .about-content {
+    padding: 0 15px;
+  }
+}
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -190,5 +237,3 @@ footer {
       transform: translateY(0);
   }
 }
-
-
